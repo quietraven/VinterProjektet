@@ -1,4 +1,6 @@
-﻿Console.WriteLine("What is your character name?");
+﻿
+
+Console.WriteLine("What is your character name?");
 string name = Console.ReadLine();
 while (true)
 {
@@ -13,6 +15,7 @@ while (true)
         Console.WriteLine("Thats not a number");
     }
 
+    // fixa fel, chat säger döp om
     switch (choise)
     {
         case 1:

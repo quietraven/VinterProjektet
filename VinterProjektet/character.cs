@@ -32,7 +32,7 @@ public class Character
 
     public void DisplayStats()
     {
-        Console.WriteLine($"");
+        Console.WriteLine($"Health: {Health}");
         Console.WriteLine($"");
         Console.WriteLine($"");
         Console.WriteLine($"");
@@ -42,21 +42,4 @@ public class Character
 
 
 
-public class Wizard: Character
-{
-    public Wizard()
-    {
-        Health = 10;
-        Damage = 17;
-    }
-}
-
-public class Default: Character
-{
-    public Default()
-    {
-        Health = 2;
-        Damage = 1;
-    }
-}
 
