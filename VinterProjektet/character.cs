@@ -1,10 +1,11 @@
 using System.Dynamic;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.Swift;
 
 public class Character
 {
 
-    private string _name;
+    // private string _name;
     int _health;
     int _damage;    
 
@@ -29,17 +30,17 @@ public class Character
         enemy_health -= Damage;
     }
 
+    public void DisplayStats()
+    {
+        Console.WriteLine($"");
+        Console.WriteLine($"");
+        Console.WriteLine($"");
+        Console.WriteLine($"");
+    }
+
 } 
 
-public class Knight: Character
-{
-   public Knight()
-    {
-        Health = 15;
-        Damage = 10;
-        
-    } 
-}
+
 
 public class Wizard: Character
 {
@@ -58,3 +59,4 @@ public class Default: Character
         Damage = 1;
     }
 }
+
