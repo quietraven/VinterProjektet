@@ -2,33 +2,47 @@
 
 Console.WriteLine("What is your character name?");
 string name = Console.ReadLine();
+
 while (true)
 {
 
-    Console.WriteLine("Choose your class ");
+    Console.WriteLine("\nChoose your class ");
     Console.WriteLine("\n1. Wizard\n2. Knight\n3.  ");
 
-    int choise;
+    int choice;
 
-    while (!int.TryParse(Console.ReadLine(), out choise))
+    while (!int.TryParse(Console.ReadLine(), out choice))
     {
         Console.WriteLine("Thats not a number");
     }
 
-    // fixa fel, chat säger döp om
-    switch (choise)
+
+
+
+    switch (choice)
     {
         case 1:
             Character Wizard = new Wizard();
+
+            Wizard.DisplayStats();
+
             break;
         case 2:
             Character Knight = new Knight();
+
+            Knight.DisplayStats();
+
             break;
         default:
-            Character Deafault = new Default();
+            Character Default = new Default();
+
+            Default.DisplayStats();
+
             break;
 
     }
+    
+    
 }
 
 
