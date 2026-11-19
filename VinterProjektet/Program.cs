@@ -1,49 +1,62 @@
-﻿
+﻿int ChoiceMethod()
+{
+    int choice;
+    while (!int.TryParse(Console.ReadLine(), out choice))
+    {
+        Console.WriteLine("not a number, try again");
+    }
+    return choice;
+
+}
+
+int playerChoice = ChoiceMethod();
 
 Console.WriteLine("What is your character name?");
 string name = Console.ReadLine();
 
-while (true)
-{
 
-    Console.WriteLine("\nChoose your class ");
-    Console.WriteLine("\n1. Wizard\n2. Knight\n3.  ");
+// while (true)
+// {
 
-    int choice;
+//     Console.WriteLine("\nChoose your class ");
+//     Console.WriteLine("\n1. Wizard\n2. Knight\n3.  ");
 
-    while (!int.TryParse(Console.ReadLine(), out choice))
-    {
-        Console.WriteLine("Thats not a number");
-    }
+//     int choice;
+
+//     while (!int.TryParse(Console.ReadLine(), out choice))
+//     {
+//         Console.WriteLine("Thats not a number");
+//     }
 
 
 
 
-    switch (choice)
-    {
-        case 1:
-            Character Wizard = new Wizard();
+//     switch (choice)
+//     {
+//         case 1:
+//             Character Wizard = new Wizard();
 
-            Wizard.DisplayStats();
+//             Wizard.DisplayStats();
 
-            break;
-        case 2:
-            Character Knight = new Knight();
 
-            Knight.DisplayStats();
+//             break;
+//         case 2:
+//             Character Knight = new Knight();
 
-            break;
-        default:
-            Character Default = new Default();
+//             Knight.DisplayStats();
 
-            Default.DisplayStats();
+//             break;
+//         default:
+//             Character Default = new Default();
 
-            break;
+//             Default.DisplayStats();
 
-    }
+//             break;
+
+//     }
     
     
-}
+// }
 
 
 // Character player1 = new Knight();
