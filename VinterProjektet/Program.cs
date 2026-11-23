@@ -9,58 +9,57 @@
 
 }
 
-int playerChoice = ChoiceMethod();
-
 Console.WriteLine("What is your character name?");
 string name = Console.ReadLine();
 
+Character Player = new();
 
-// while (true)
-// {
+while (true)
+{
+    List<string> inventory = [];
 
-//     Console.WriteLine("\nChoose your class ");
-//     Console.WriteLine("\n1. Wizard\n2. Knight\n3.  ");
+    Console.WriteLine("\nChoose your class ");
+    Console.WriteLine("\n1. Wizard\n2. Knight\n3.  ");
 
-//     int choice;
+    int choice = ChoiceMethod();
 
-//     while (!int.TryParse(Console.ReadLine(), out choice))
-//     {
-//         Console.WriteLine("Thats not a number");
-//     }
+    switch (choice)
+    {
+        case 1:
+            Player = new Wizard();
 
-
-
-
-//     switch (choice)
-//     {
-//         case 1:
-//             Character Wizard = new Wizard();
-
-//             Wizard.DisplayStats();
+            Player.DisplayStats();
 
 
-//             break;
-//         case 2:
-//             Character Knight = new Knight();
+            break;
+        case 2:
+            Player = new Knight();
+            break;
+        default:
+            Character Default = new Default(); // hur får jag default stats
 
-//             Knight.DisplayStats();
+            break;
 
-//             break;
-//         default:
-//             Character Default = new Default();
+    }
 
-//             Default.DisplayStats();
+    Player.DisplayStats();
 
-//             break;
-
-//     }
+    Console.WriteLine("story");
+    Console.WriteLine("1. 2. ");
     
-    
-// }
+    choice =ChoiceMethod();
+
+    if (choice == 1)
+    {
+        Console.WriteLine("");
+    }
+
+    else if (choice == 2)
+    {
+        Console.WriteLine("");
+    }
 
 
-// Character player1 = new Knight();
 
-// player1.Name = name;
+}
 
-// Console.WriteLine(player1.Name);

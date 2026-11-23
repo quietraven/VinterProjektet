@@ -33,7 +33,7 @@ public class Character
     public void DisplayStats()
     {
         Console.WriteLine($"Health: {Health}");
-        Console.WriteLine($"");
+        Console.WriteLine($"Damage: {Damage}");
         Console.WriteLine($"");
         Console.WriteLine($"");
     }
