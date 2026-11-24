@@ -4,5 +4,8 @@ public class Wizard: Character
     {
         Health = 10;
         Damage = 17;
+        Money = 5;
+
+        inventory.Add("Healing Potion"); 
     }
 }

@@ -1,3 +1,4 @@
+using System.Data.SqlTypes;
 using System.Dynamic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.Swift;
@@ -5,9 +6,11 @@ using System.Runtime.InteropServices.Swift;
 public class Character
 {
 
-    // private string _name;
+    public string _name;
     int _health;
     int _damage;    
+    public List<string> inventory = [];
+    int _money;
 
     public int Health
     {
@@ -19,6 +22,12 @@ public class Character
     {
         get => _damage;
         set => _damage = Math.Clamp(value, 1, 20);
+    }
+
+    public int Money 
+    {
+        get => _money;
+        set => _money = Math.Clamp(value, 0, 1000);
     }
 
     public void TakeDamage(int damage)
@@ -34,7 +43,7 @@ public class Character
     {
         Console.WriteLine($"Health: {Health}");
         Console.WriteLine($"Damage: {Damage}");
-        Console.WriteLine($"");
+        Console.WriteLine($"Money: {Money}");
         Console.WriteLine($"");
     }
 

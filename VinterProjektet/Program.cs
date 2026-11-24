@@ -9,6 +9,8 @@
 
 }
 
+ 
+
 Console.WriteLine("What is your character name?");
 string name = Console.ReadLine();
 
@@ -16,7 +18,7 @@ Character Player = new();
 
 while (true)
 {
-    List<string> inventory = [];
+   
 
     Console.WriteLine("\nChoose your class ");
     Console.WriteLine("\n1. Wizard\n2. Knight\n3.  ");
@@ -27,24 +29,19 @@ while (true)
     {
         case 1:
             Player = new Wizard();
-
-            Player.DisplayStats();
-
-
             break;
         case 2:
             Player = new Knight();
             break;
         default:
-            Character Default = new Default(); // hur får jag default stats
-
+            Player = new Default(); // hur får jag default stats
             break;
 
     }
 
     Player.DisplayStats();
-
-    Console.WriteLine("story");
+    Console.WriteLine("skriv inventory om du vill se vad du har i ditt inventory"); 
+    Console.WriteLine("story"); // fixa det som står över och skriv på engelska
     Console.WriteLine("1. 2. ");
     
     choice =ChoiceMethod();

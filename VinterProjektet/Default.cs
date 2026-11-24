@@ -6,5 +6,6 @@ public class Default: Character
     {
         Health = 2;
         Damage = 1;
+        Money = 0;
     }
 }
