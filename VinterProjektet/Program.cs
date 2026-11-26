@@ -34,14 +34,14 @@ while (true)
             Player = new Knight();
             break;
         default:
-            Player = new Default(); // hur får jag default stats
+            Player = new Default();
             break;
 
     }
 
     Player.DisplayStats();
     Console.WriteLine("skriv inventory om du vill se vad du har i ditt inventory"); 
-    Console.WriteLine("story"); // fixa det som står över och skriv på engelska
+    Console.WriteLine("story"); 
     Console.WriteLine("1. 2. ");
     
     choice =ChoiceMethod();
@@ -56,7 +56,14 @@ while (true)
         Console.WriteLine("");
     }
 
-
+    Console.WriteLine("Do you want to play again? \nIf yes press enter else write no ");
+    string answer = Console.ReadLine().ToLower();
+    if (answer == "no" || answer == "n")
+    {
+       break; 
+    }
+    
+    
 
 }
 
